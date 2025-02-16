@@ -6,10 +6,12 @@ export default function Colors({
   color,
   setColor,
   setIsHoveringColor,
+  initialColor,
 }: {
   color: string;
   setColor: (color: string) => void;
   setIsHoveringColor: (color: string | undefined) => void;
+  initialColor: string;
 }) {
   const [isHoveringColorPicker, setIsHoveringColorPicker] = useState(false);
   const [editColor, setEditColor] = useState(false);

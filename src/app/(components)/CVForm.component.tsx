@@ -31,6 +31,7 @@ export default function CVForm() {
               color={color}
               setColor={setColor}
               setIsHoveringColor={setIsHoveringColor}
+              initialColor={initialColor}
             />
 
             <div className="flex flex-col gap-4 overflow-y-auto mt-8 max-w-[550px]">
