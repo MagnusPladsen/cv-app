@@ -1,3 +1,15 @@
+import { DateRange } from "react-day-picker";
+
+interface Education {
+  schoolName: string;
+  schoolDuration: DateRange;
+}
+
+interface Experience {
+  experienceName: string;
+  experienceDuration: DateRange;
+}
+
 interface CVFormData {
   name: string;
   position: string;
@@ -8,6 +20,8 @@ interface CVFormData {
   website: string;
   linkedin: string;
   github: string;
+  education: Education[];
+  experience: Experience[];
 }
 
 export type { CVFormData };
