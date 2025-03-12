@@ -1,3 +1,4 @@
+import SectionWrapper from "@/components/Section/SectionWrapper.component";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { HexColorPicker } from "react-colorful";
@@ -29,8 +30,8 @@ export default function Colors({
   }, [editColor, isHoveringColorPicker]);
 
   return (
-    <div className="relative">
-      <div className="flex flex-row gap-4 items-center">
+    <SectionWrapper title="Theme color" className="relative">
+      <div className="flex flex-row gap-4 items-center mt-2">
         {themeColors.map((color, index) => (
           <input
             type="button"
@@ -67,6 +68,6 @@ export default function Colors({
           <HexColorPicker color={color} onChange={setColor} />
         </div>
       )}
-    </div>
+    </SectionWrapper>
   );
 }

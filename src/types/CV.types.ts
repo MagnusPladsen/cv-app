@@ -7,11 +7,13 @@ interface Education {
 
 interface Experience {
   experienceName: string;
+  experienceTitle: string;
   experienceDuration: DateRange;
 }
 
 interface CVFormData {
   name: string;
+  picture: string;
   position: string;
   about: string;
   email: string;
