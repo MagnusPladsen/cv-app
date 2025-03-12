@@ -2,17 +2,20 @@ import { useFormContext } from "react-hook-form";
 import { Input } from "./ui/input";
 import { cn } from "@/lib/utils";
 import { Textarea } from "./ui/textarea";
+import { HTMLInputTypeAttribute } from "react";
 
 export default function FormInput({
   label,
   name,
   className,
   textArea,
+  type,
 }: {
   label: string;
   name: string;
   className?: string;
   textArea?: boolean;
+  type?: HTMLInputTypeAttribute;
 }) {
   const { register } = useFormContext();
 
@@ -28,7 +31,11 @@ export default function FormInput({
           rows={4}
         />
       ) : (
-        <Input {...register(name)} className="bg-white text-black" />
+        <Input
+          {...register(name)}
+          className="bg-white text-black"
+          type={type}
+        />
       )}
     </div>
   );

@@ -5,6 +5,7 @@ import { File } from "lucide-react";
 import { useRef } from "react";
 import { useFormContext } from "react-hook-form";
 import { useReactToPrint } from "react-to-print";
+import Image from "next/image";
 
 export default function CVPaper({
   isHoveringColor,
@@ -37,7 +38,21 @@ export default function CVPaper({
         <div
           style={{ backgroundColor: isHoveringColor ?? color }}
           className="w-[35%] max-w-[33%] transition-all duration-200 px-4 pt-10 text-white"
-        ></div>
+        >
+          {values.picture ? (
+            <Image
+              src={values.picture}
+              alt="Picture"
+              className="w-full h-full object-cover"
+              width={100}
+              height={100}
+            />
+          ) : (
+            <div className="w-[100px] h-[100px] bg-gray-300 flex items-center justify-center">
+              <p className="text-sm">No picture</p>
+            </div>
+          )}
+        </div>
 
         {/* Right side */}
         <div className="flex flex-col pt-10 pl-4 max-w-[480px]">
@@ -111,6 +126,9 @@ export default function CVPaper({
                     experience.experienceName.length > 0 && (
                       <div key={index}>
                         <p className="text-sm ">{experience.experienceName}</p>
+                        <p className="text-xs text-gray-500 ">
+                          {experience.experienceTitle}
+                        </p>
                         {experience.experienceDuration.from &&
                           experience.experienceDuration.to && (
                             <p className="text-xs text-muted-foreground">

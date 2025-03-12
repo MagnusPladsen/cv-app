@@ -23,7 +23,8 @@ export default function CVForm() {
       ],
       experience: [
         {
-          experienceName: "Software Developer",
+          experienceName: "Meta",
+          experienceTitle: "Software Developer",
           experienceDuration: { from: new Date(), to: new Date() },
         },
       ],
@@ -65,7 +66,7 @@ export default function CVForm() {
               initialColor={initialColor}
             />
 
-            <div className="flex flex-col gap-16 overflow-y-auto mt-8 max-w-[550px]">
+            <div className="flex flex-col gap- overflow-y-auto mt-2 max-w-[550px]">
               <PersonalInformation />
               <Education />
               <Experience />
