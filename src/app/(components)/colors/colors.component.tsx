@@ -31,7 +31,7 @@ export default function Colors({
 
   return (
     <SectionWrapper title="Theme color" className="relative">
-      <div className="flex flex-row gap-4 items-center mt-2">
+      <div className="flex flex-row gap-4 items-center mt-6">
         {themeColors.map((color, index) => (
           <input
             type="button"
