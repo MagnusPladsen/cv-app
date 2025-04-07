@@ -39,17 +39,15 @@ export default function CVPaper({
           style={{ backgroundColor: isHoveringColor ?? color }}
           className="w-[35%] max-w-[33%] transition-all duration-200 px-4 pt-10 text-white"
         >
-          {values.picture ? (
-            <Image
-              src={values.picture}
-              alt="Picture"
-              className="w-full h-full object-cover"
-              width={100}
-              height={100}
-            />
-          ) : (
-            <div className="w-[100px] h-[100px] bg-gray-300 flex items-center justify-center">
-              <p className="text-sm">No picture</p>
+          {values.profilePicture && (
+            <div className="flex w-full items-center justify-center">
+              <Image
+                src={values.profilePicture}
+                alt="Picture"
+                className="rounded-full h-[175px] object-cover"
+                width={175}
+                height={175}
+              />
             </div>
           )}
         </div>

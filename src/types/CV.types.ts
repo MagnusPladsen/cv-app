@@ -13,7 +13,7 @@ interface Experience {
 
 interface CVFormData {
   name: string;
-  picture: string;
+  profilePicture: null | string;
   position: string;
   about: string;
   email: string;

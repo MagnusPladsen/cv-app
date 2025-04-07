@@ -15,6 +15,8 @@ import Experience from "./forms/Experience.component";
 export default function CVForm() {
   const methods = useForm<CVFormData>({
     defaultValues: {
+      name: "",
+      position: "",
       education: [
         {
           schoolName: "University of Technology",
